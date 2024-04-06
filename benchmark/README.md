@@ -41,3 +41,20 @@ This will expose an Apache HTTPd on <http://localhost:8080/> (where the w3id bas
 
 Use the `./clone-test.bash` tool to add additional tests. The initial number are meant to be sequentials and unique, but gaps are allowed.
 In order to work as PIDs there is a regular expression check for `^([0-9][0-9]*-[a-z0-9-]*)$` 
+
+Note that `.htaccess` generally use this style:
+
+```
+<Files crate-34.zip>  
+  Header add Link <https://w3id.org/ro/crate>;rel="profile"
+  Header add Link <https://s11.no/2022/a2a-fair-metrics/34-http-item-rocrate/>;rel="collection"
+</Files>
+```
+
+This only applies the header when a request is answered for the file `crate-34.zip`, so headers on the landing page should be set on `index.html`.
+
+If a link attribute contains spaces (e.g. multiple listings in `profile` or a human readable `title`) you will need to wrap the whole header with `"` quotes and escape the inner quotes to be transmitted with `\"`, e.g.
+
+```
+  Header add Link "<https://s11.no/2022/a2a-fair-metrics/34-http-item-rocrate/ro-crate-preview.html>;rel=\"describedby\";type=\"text/html\";profile=\"http://www.w3.org/ns/json-ld#flattened http://www.w3.org/ns/json-ld#compacted https://w3id.org/ro/crate\""
+```
