@@ -1,0 +1,6 @@
+<Files index.html>
+  Header add Link <https://w3id.org/a2a-fair-metrics/115-fdo-gr4-attribute-uuid/>;rel="cite-as"
+  Header add Link <https://schema.org/LearningResource>;rel="type"
+  Header add Link <https://s11.no/2022/a2a-fair-metrics/115-fdo-gr4-attribute-uuid/metadata.txt>;rel="describedby";type="text/plain"
+  Header add Link <urn:uuid:f3c157c9-0194-5a24-89a6-8c289d8a67ef>;rel="https://schema.org/identifier";title="f3c157c9-0194-5a24-89a6-8c289d8a67ef"
+</Files>

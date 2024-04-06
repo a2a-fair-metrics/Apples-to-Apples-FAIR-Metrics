@@ -1,0 +1,37 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>115-fdo-gr4-attribute-uuid</title>
+
+</head>
+
+<body>
+	<h1>115-fdo-gr4-attribute-uuid</h1>
+	<p>
+		This landing page has these FAIR Signposting HTTP headers:
+	</p>
+	<ul>
+		<li><code>rel=cite-as</code> to <a href="https://w3id.org/a2a-fair-metrics/115-fdo-gr4-attribute-uuid/">w3id PID</a></li>
+		<li><code>rel=type</code> to <a href="https://schema.org/LearningResource">LearningResource</a></li>
+		<li><code>rel=describedby</code> to <a href="metadata.txt">metadata.txt</a> (text/plain)</li>
+		<li>
+			<code>rel=https://schema.org/identifier</code> to <code>urn:uuid:f3c157c9-0194-5a24-89a6-8c289d8a67ef</code>
+			(UUIDv5 hashed from the PID) with  <code>title=f3c157c9-0194-5a24-89a6-8c289d8a67ef</code>
+		</li>
+	</ul>
+	<p>This is a test for FDO principle 
+	<a href="https://w3id.org/ro/doi/10.5281/zenodo.7782262;FDO-GR4">FDO-GR4</a>:
+	<q>The PID record needs to contain mandatory FDO attributes, may contain optional FDO attributes and attributes agreed upon by recognized communities. Values of attributes can be references. Expectations of which attribute values are contained within the PID record and which are references pointing from the record to external sources should be specified in the PID profile or definition of said attribute in a Data Type Registry.</q>
+	</p>
+	<p>
+		This test is an edge case where the link relation is an extension URI and the target is a non-resolvable (but otherwise valid) URI. It is also an example of pushing the Signposting capabilities to handle FDO key/value pairs to strings shown in <code>title</code>
+	</p>
+	<p>
+		<strong>Note:</strong> Signposting do not recommend the use of extension relations, linking to non-resolvable URIs or using link relations to express textual attributes in this way. This should rather be serialized in the metadata, e.g. using JSON-LD format.
+	</p>	
+</body>
+
+</html>
