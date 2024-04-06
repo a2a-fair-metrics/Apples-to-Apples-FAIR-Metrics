@@ -39,10 +39,10 @@ This will expose an Apache HTTPd on <http://localhost:8080/> (where the w3id bas
 
 ## Adding tests
 
-Use the `./clone-test.bash` tool to add additional tests. The initial number are meant to be sequentials and unique, but gaps are allowed.
-In order to work as PIDs there is a regular expression check for `^([0-9][0-9]*-[a-z0-9-]*)$` 
+Use the `./clone-test.bash` tool to add additional tests. The numeric prefix is meant to be sequential and unique, but gaps are allowed.
+In order to work as PIDs, there is a regular expression check for `^([0-9][0-9]*-[a-z0-9-]*)$` for the folder name.  This is enforced by a regular expression on w3id.org.
 
-Note that `.htaccess` generally use this style:
+Remember to update both the `index.html` for humans and HTTP signposting in `.htaccess`, which generally use this style:
 
 ```
 <Files crate-34.zip>  
@@ -51,7 +51,7 @@ Note that `.htaccess` generally use this style:
 </Files>
 ```
 
-This only applies the header when a request is answered for the file `crate-34.zip`, so headers on the landing page should be set on `index.html`.
+The above only applies the header when a request is answered by the file `crate-34.zip`, similarly headers on the landing page should be set on `index.html` (which answers requests for `00-foo/` as well as `00-foo/index.html`).
 
 If a link attribute contains spaces (e.g. multiple listings in `profile` or a human readable `title`) you will need to wrap the whole header with `"` quotes and escape the inner quotes to be transmitted with `\"`, e.g.
 
