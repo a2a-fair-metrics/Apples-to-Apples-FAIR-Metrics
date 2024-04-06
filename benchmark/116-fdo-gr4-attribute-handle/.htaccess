@@ -1,0 +1,9 @@
+<Files index.html>
+  Header add Link <https://w3id.org/a2a-fair-metrics/116-fdo-gr4-attribute-handle/>;rel="cite-as"
+  Header add Link <https://schema.org/PhotographAction>;rel="type"
+  Header add Link <https://schema.org/AboutPage>;rel="type"
+  Header add Link <https://wildlive.senckenberg.de/api/objects/wildlive/7df91e6d148a386cc674>;rel="describedby";type="application/ld+json"
+  Header add Link "<https://spdx.org/licenses/CC-BY-4.0>;rel=\"license\";title=\"Creative Commons Attribution 4.0 International\""
+  Header add Link <https://orcid.org/0000-0002-2631-4601>;rel="author"
+  Header add Link <https://hdl.handle.net/21.T11998/b93260a5-a6c3-4db7-9b66-a093f842a6c6>;rel="describes";title="21.T11998/b93260a5-a6c3-4db7-9b66-a093f842a6c6"
+</Files>
